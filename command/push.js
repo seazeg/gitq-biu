@@ -39,8 +39,7 @@ module.exports = (program) => {
 
         } else {
             console.log(chalk.green(`>> [ ${commands[i]} ] `), chalk.green(`Successfully`));
-            console.log(exec.stdout);
-            console.log(exec);
+            !!exec.stdout?console.log(exec.stderr):console.log(exec.stdout);
         }
     }
 }
