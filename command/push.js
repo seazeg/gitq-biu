@@ -13,8 +13,8 @@ module.exports = (program) => {
         1: `git add -A`,
         2: `git commit -m '${program.message}'`,
         3: `git pull`,
-        4: `git push`,
-        5: `git --version`
+        4: `git push`
+        // 5: `git --version`
     }
 
     for (let i in commands) {
@@ -40,6 +40,7 @@ module.exports = (program) => {
         } else {
             console.log(chalk.green(`>> [ ${commands[i]} ] `), chalk.green(`Successfully`));
             console.log(exec.stdout);
+            console.log(exec);
         }
     }
 }
