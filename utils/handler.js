@@ -1,3 +1,4 @@
+'use strict'
 const shell = require('shelljs');
 const chalk = require('chalk')
 
