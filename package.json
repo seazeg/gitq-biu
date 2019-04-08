@@ -13,6 +13,11 @@
     "commander": "^2.20.0",
     "shelljs": "^0.8.3"
   },
+  "keywords": [
+    "command",
+    "git",
+    "javascript"
+  ],
   "bin": {
     "gitq": "bin/gitq"
   }
