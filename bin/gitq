@@ -19,9 +19,8 @@ program
     .command('push')
     .description('素质三连')
     .alias('p')
-    .action((argv) => {
-        console.log(argv);
-        require('../command/push')(argv)
+    .action(() => {
+        require('../command/push')(program)
     })
 
 
