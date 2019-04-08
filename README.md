@@ -16,5 +16,8 @@ gitq p -c
 
 //设置提交信息
 gitq p -m 'commit message'
+
+//合并XXX分支并提交
+gitq mp -b XXX
 ```
 
