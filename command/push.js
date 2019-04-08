@@ -1,7 +1,8 @@
 'use strict'
-const shell = require("shelljs");
+const shell = require('shelljs');
 const chalk = require('chalk')
-const path = require("path");
+const path = require('path');
+const cmd =  require('./command')
 
 
 console.log((chalk.blue(`\n Current Directory > ` + path.resolve('./') + `\n `)));
@@ -12,12 +13,7 @@ module.exports = (program) => {
 
     let currBranch = getCurBranch()
 
-    let commands = {
-        1: `git add -A`,
-        2: `git commit -m '${program.message}'`,
-        3: `git pull`,
-        4: `git push`
-    }
+    let commands = JSON.parse(cmd).push;
 
     for (let i in commands) {
         const exec = shell.exec(commands[i], {

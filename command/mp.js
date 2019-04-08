@@ -12,7 +12,6 @@ module.exports = (program) => {
 
     let currBranch = getCurBranch()
 
-    // console.log(program.branch);
     let commands = {
         1: `git add -A`,
         2: `git commit -m '${program.message}'`,
