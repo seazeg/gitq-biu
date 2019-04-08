@@ -6,16 +6,14 @@ const path = require("path");
 
 console.log((chalk.blue(`\n Current Directory > ` + path.resolve('./') + `\n `)));
 module.exports = (program) => {
-    console.log(program.message);
-    console.log(program.closed);
     if (!program.message) {
-        program.message = `'Default Commit Message :art:'`
+        program.message = `Default Commit Message :art:`
     }
     const commands = {
         // 1: `git --version`,
         2: `git add -A`,
-        3: `git pull`,
-        4: `git commit -m ${program.message}`,
+        3: `git commit -m '${program.message}'`,
+        4: `git pull`,
         5: `git push`
     }
 
@@ -29,7 +27,7 @@ module.exports = (program) => {
             console.log(chalk.red(exec.stdout));
             console.log(chalk.red(exec.stderr));
             console.log(chalk.red(`====================== Error ======================`));
-            if (program.closed != undefined) {
+            if (program.closed === undefined) {
                 if (exec.stderr.includes(`Automatic merge failed`) || exec.stdout.includes(`Automatic merge failed`)) {
                     mergeTool()
                 } else {

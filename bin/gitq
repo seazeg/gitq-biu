@@ -17,7 +17,7 @@ program.usage('<command>')
 
 program
     .command('push')
-    .description('素质三连')
+    .description('git素质三连')
     .alias('p')
     .action(() => {
         require('../command/push')(program)
