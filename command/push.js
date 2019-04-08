@@ -6,6 +6,7 @@ const path = require("path");
 
 console.log((chalk.blue(`\n Current Directory > ` + path.resolve('./') + `\n `)));
 module.exports = (commit) => {
+    console.log(commit);
     if (typeof commit == 'object') {
         commit = `'Default Commit Information :art:'`
     }
