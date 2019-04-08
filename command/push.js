@@ -10,11 +10,11 @@ module.exports = (program) => {
         program.message = `Default Commit Message :art:`
     }
     const commands = {
-        // 1: `git --version`,
-        2: `git add -A`,
-        3: `git commit -m '${program.message}'`,
-        4: `git pull`,
-        5: `git push`
+        1: `git add -A`,
+        2: `git commit -m '${program.message}'`,
+        3: `git pull`,
+        4: `git push`,
+        5: `git --version`
     }
 
     for (let i in commands) {
