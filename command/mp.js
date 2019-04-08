@@ -8,6 +8,7 @@ module.exports = (program) => {
         program.message = `Default Commit Message :art:`
     }
 
+    let currBranch = getCurBranch();
     let commands = {
         1: `git add -A`,
         2: `git commit -m '${program.message}'`,
@@ -21,4 +22,10 @@ module.exports = (program) => {
     }
 
     handler(commands, program)
+}
+
+function getCurBranch() {
+    return shell.exec(`git symbolic-ref --short -q HEAD`, {
+        silent: true
+    }).stdout
 }
