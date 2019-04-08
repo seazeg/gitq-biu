@@ -1,9 +1,7 @@
 'use strict'
-const shell = require('shelljs');
 const chalk = require('chalk')
 const path = require('path');
 const handler = require('../utils/handler')
-
 
 console.log((chalk.blue(`\n Current Directory > ` + path.resolve('./') + `\n `)));
 module.exports = (program) => {
@@ -19,6 +17,5 @@ module.exports = (program) => {
     }
 
     handler(commands, program)
-
 }
 
