@@ -1,8 +1,16 @@
-# Dependencies
-.psci_modules
-bower_components
-node_modules
-
-# Generated files
-.psci
-output
+.DS_Store
+build/*
+!build/icons
+node_modules/
+npm-debug.log
+npm-debug.log.*
+thumbs.db
+!.gitkeep
+.vscode/*
+.vscode
+_*
+tsconfig.json
+webpack.config.js
+demo.*
+*/*.orig
+*.orig

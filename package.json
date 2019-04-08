@@ -1,0 +1,19 @@
+{
+  "name": "gitq-biu",
+  "version": "1.0.2",
+  "description": "git biubiubiu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evan.G",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "shelljs": "^0.8.3"
+  },
+  "bin": {
+    "gitq": "bin/gitq"
+  }
+}
