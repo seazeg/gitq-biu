@@ -9,10 +9,8 @@ const program = require('commander')
 // 定义当前版本
 program
     .version(require('../package').version)
-    .option('-m')
-    .parse(process.argv) 
-    .option('-c')
-    .parse(process.argv)
+    .option('-m, --message <string>')
+    .option('-c, --closed')
 
 // 定义使用方法
 program.usage('<command>')
@@ -22,6 +20,7 @@ program
     .description('素质三连')
     .alias('p')
     .action((argv) => {
+        console.log(argv);
         require('../command/push')(argv)
     })
 

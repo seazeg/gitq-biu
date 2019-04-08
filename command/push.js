@@ -6,9 +6,10 @@ const path = require("path");
 
 console.log((chalk.blue(`\n Current Directory > ` + path.resolve('./') + `\n `)));
 module.exports = (commit) => {
-    console.log(commit);
+    console.log(commit.message);
+    console.log(commit.closed);
     if (typeof commit == 'object') {
-        commit = `'Default Commit Information :art:'`
+        commit = `'Default Commit Message :art:'`
     }
     const commands = {
         // 1: `git --version`,
