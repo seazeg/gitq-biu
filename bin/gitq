@@ -9,8 +9,9 @@ const program = require('commander')
 // 定义当前版本
 program
     .version(require('../package').version)
-    .option('-m, --message <string>','commit message')
-    .option('-c, --closed','closed the auto merge tool')
+    .option('-m, --message <string>', 'commit message')
+    .option('-c, --closed', 'closed the auto merge tool')
+    .option('-b, --branch <string>', 'branch name')
 
 // 定义使用方法
 program.usage('<command>')
@@ -23,6 +24,13 @@ program
         require('../command/push')(program)
     })
 
+program
+    .command('mergepush')
+    .description('git合并后三连')
+    .alias('mp')
+    .action(() => {
+        require('../command/mp')(program)
+    })
 
 program.parse(process.argv)
 
