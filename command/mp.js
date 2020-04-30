@@ -7,7 +7,7 @@ const handler = require('../utils/handler')
 console.log((chalk.blue(`\n Current Directory > ` + path.resolve('./') + `\n `)));
 module.exports = (program) => {
     if (!program.message) {
-        program.message = `Default Commit Message :art:`
+        program.message = `Default Commit Message`
     }
 
     let currBranch = getCurBranch();
