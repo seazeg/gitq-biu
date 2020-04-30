@@ -15,12 +15,12 @@ const getAuthor = () => {
 
 module.exports = (program) => {
     if (!program.message) {
-        program.message = `default Commit Message [${getAuthor()}]`
+        program.message = `default Commit Message [ ${getAuthor()}]`
     }
 
     let commands = {
         1: `git add -A`,
-        2: `git commit -m "${program.message} [${getAuthor()}]"`,
+        2: `git commit -m "${program.message} [ ${getAuthor()}]"`,
         3: `git pull`,
         4: `git push`
     }
