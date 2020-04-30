@@ -10,18 +10,18 @@ console.log((chalk.blue(`\n Current Directory > ` + path.resolve('./') + `\n `))
 const getAuthor = () => {
     return shell.exec(`git config --global user.name`, {
         silent: true
-    }).stdout.trim()
+    }).stdout
 }
 
 module.exports = (program) => {
     if (!program.message) {
-        program.message = `default Commit Message [${getAuthor()}]`
+        program.message = `default Commit Message [${getAuthor().trim()}]`
         console.log(program.message);
     }
 
     let commands = {
         1: `git add -A`,
-        2: `git commit -m "${program.message} [${getAuthor()}]"`,
+        2: `git commit -m "${program.message} [${getAuthor().trim()}]"`,
         3: `git pull`,
         4: `git push`
     }
