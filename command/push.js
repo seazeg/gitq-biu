@@ -13,7 +13,6 @@ const getAuthor = () => {
     }).stdout
 }
 
-
 module.exports = (program) => {
     if (!program.message) {
         program.message = `default Commit Message - ${getAuthor()}`
