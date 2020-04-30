@@ -15,7 +15,7 @@ const getAuthor = () => {
 
 module.exports = (program) => {
     if (!program.message) {
-        program.message = `default Commit Message [${getAuthor()}]`
+        program.message = `default Commit Message [${getAuthor().trim()}]`
     }
 
     let commands = {
