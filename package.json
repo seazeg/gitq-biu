@@ -1,10 +1,10 @@
 {
   "name": "gitq-biu",
-  "version": "1.0.8",
+  "version": "1.0.81",
   "description": "git biubiubiu",
   "main": "index.js",
   "scripts": {
-    "push": "npm publish"
+    "push": "gitq p;npm publish"
   },
   "author": "Evan.G",
   "license": "ISC",
